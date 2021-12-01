@@ -5,83 +5,505 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../image/l_128px.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./image/l_128px.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-
+    <title>Web Shop </title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title-text">
-            <div class="title login">Login From</div>
-            <div class="title signup">Signup From</div>
+    <!-- /* header section start */ -->
+
+    <section id="header">
+        <div class="container">
+            <header>
+                <a href="#" class="logo">
+                    <img src="./image/l_128px.png" alt="logo">
+                    <p>Shopping<br> <span>Plus</span></p>
+                </a>
+                <div class="search-box">
+                    <a href="#"> <img src="./image/search_128px.png" alt=""></a>
+                    <input type="text">
+
+                </div>
+                <div class="menu-btn" onclick="showMenu()">
+
+                </div>
+                <div class="select-box">
+                    <div class="product-tags">
+                        <a href="#products">Sản phẩm <i class="fas fa-angle-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="#vouchers">Giày</a>
+                            </li>
+                            <li>
+                                <a href="#">Quần</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cart-box">
+                        <a href="#"> <img src="./image/add_shopping_cart_60px.png" alt=""> Giỏ hàng</a>
+                        <div class="cart"></div>
+                    </div>
+
+                    <a href="./login/index.html" class="user">
+                        <img src="./image/user_64px.png" alt=""> <span>Login</span> |
+                        <span>Sign in</span>
+                    </a>
+                </div>
+
+            </header>
+        </div>
+    </section>
+    <!-- /* header section end */ -->
+    <!-- /* sample products section start */ -->
+
+    <section id="sample-products">
+        <div class="container">
+            <div class="sample-products">
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80"
+                        alt="">
+                    <p>Giày Nữ</p>
+                </a>
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1542219550-37153d387c27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <p>Giày Nam</p>
+                </a>
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1524275539700-cf51138f679b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt="">
+                    <p>Quần áo nam</p>
+                </a>
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                        alt="">
+                    <p>Quần áo nữ</p>
+                </a>
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <p>Phụ kiện nữ</p>
+                </a>
+                <a href="#products" class="sample-product">
+                    <img src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <div class="new-tag">New</div>
+                    <p>Mũ</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- /* sample products section end */ -->
+
+
+
+    <!-- /* banner section start */ -->
+
+
+    <section id="banner">
+        <div class="title">
+            <h2>Your Clothes<br><span>your light</span> </h2>
+            <a href="#products">Try Now</a>
+        </div>
+        <div class="slider-box">
+            <div class="sliders">
+                <input type="radio" name="slider" checked id="img1">
+                <input type="radio" name="slider" id="img2">
+                <input type="radio" name="slider" id="img3">
+                <div class="img-box">
+                    <img class="anh"
+                        src="https://images.unsplash.com/photo-1526745925052-dd824d27b9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <img class="anh"
+                        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                    <img class="anh"
+                        src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        alt="">
+                </div>
+                <div class="slider-control">
+                    <label class="img1" for="img1"></label>
+                    <label class="img2" for="img2"></label>
+                    <label class="img3" for="img3"></label>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /* banner section end */ -->
+
+
+    <!-- /* vouchers section start */ -->
+
+
+    <section id="vouchers">
+        <div class="container-full">
+            <h2>Voucher cho bạn <img src="./image/sale_96px.png"></h2>
+
+            <hr>
+            <div class="vouchers-box">
+                <div class="voucher">
+                    <div class="voucher-content voucher-1">
+                        <h2>Crazy<br><span>deals</span></h2>
+                        <p>Don't forget</p>
+                        <p>sale off <span>50%</span></p>
+                        <a href="#">Buy Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <img src="./image/sale_200px.png" alt="">
+                </div>
+                <div class="voucher">
+                    <div class="voucher-content voucher-2">
+                        <h2>Crazy<br><span>deals</span></h2>
+                        <p>Don't forget</p>
+                        <p>sale off <span>15%</span></p>
+                        <a href="#">Buy Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <img src="./image/voucher_240px.png" alt="">
+                </div>
+                <div class="voucher">
+                    <div class="voucher-content voucher-3">
+                        <h2>voucher<br><span>birthday</span></h2>
+                        <p>Don't forget</p>
+                        <p>sale off <span>49%</span></p>
+                        <a href="#">Buy Now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <img src="./image/birthday_time_and_date_holidays_96px.png" alt="">
+                </div>
+            </div>
         </div>
 
-        <div class="form-container">
-            <div class="slide-controls">
-                <input type="radio" name="slider" id="login" checked>
-                <input type="radio" name="slider" id="signup">
-                <label for="login" class="silde login">Login</label>
-                <label for="signup" class="silde signup">Signup</label>
-                <div class="silde-tab"></div>
-            </div>
-            <div class="form-inner">
-                <form action="../index.html" class="login">
-                    <div class="field">
-                        <input type="text" placeholder="Email Address" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
-                    <div class="field">
-                        <input type="submit" class="btn" value="Login">
-                    </div>
-                    <div class="signup-link ">Not a member?<a href="#">Signup now</a></div>
-                </form>
+    </section>
+    <!-- /* vouchers section end */ -->
 
-                <form action="../index.html" id="signup-form" class="signup">
-                    <div class="field">
-                        <input type="text" placeholder="Email Address" required>
+    <!-- /* products section start */ -->
+    <section id="products">
+        <div class="container products">
+            <h2><img src="./image/add_shopping_cart_60px.png">Tất cả sản phẩm :</h2>
+            <form action="#" method="get">
+                <div class="find-products-tile">Tìm kiếm sản phẩm theo :</div>
+                <input type="checkbox" name="find" id="find" class="find-btn"></input>
+                <label for="find"><img src="./image/search_in_list_48px.png" alt=""></label>
+                <div class="find-products">
+                    <div class="place-box">
+                        <label for="find"> Địa điểm</label>
+                        <select id="place" name="place">
+                            <option>Miền Bắc</option>
+                            <option>Miền Trung</option>
+                            <option>Miền Nam</option>
+                            <option>Khác</option>
+                        </select>
                     </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
+                    <div class="price-box">
+                        <label for="find"> Giá </label>
+                        <select id="price" name="price">
+                            <option>Giảm dần</option>
+                            <option>Tăng dần</option>
+                        </select>
                     </div>
-                    <div class="field">
-                        <input type="password" placeholder="Confirm Password" required>
+                    <label for="find">Bán Chạy</label>
+                    <label for="find">Mới Nhất</label>
+                    <label for="find">Tìm</label>
+                </div>
+            </form>
+        </div>
+        <div class="container product-box">
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1499972823984-af6ee544403f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>240$</del><span>180$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
                     </div>
-                    <div class="field">
-                        <input type="submit" class="btn" id="submit" value="Signup">
+                    <span>Đã bán: 34</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1499972823984-af6ee544403f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>240$</del><span>180$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
                     </div>
-                </form>
+                    <span>Đã bán: 34</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1499972823984-af6ee544403f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>240$</del><span>180$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 34</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1499972823984-af6ee544403f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>240$</del><span>180$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 34</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                        alt=""></div>
+
+                <h2>SHOE</h2>
+                <p><del>200$</del><span>150$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 120</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>30$</del><span>10$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 64</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>30$</del><span>10$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 64</span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="add_cart">
+                    <img src="./image/add_shopping_cart_60px.png" alt="">
+                    Thêm vào giỏ hàng
+                </div>
+                <div class="product-img"> <img
+                        src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                        alt=""></div>
+
+                <h2>AIR JORDAN 1 LOW 'ROYAL TOE'</h2>
+                <p><del>30$</del><span>10$</span></p>
+                <div class="reviews">
+                    <div class="stars">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_96px.png" alt="">
+                        <img src="./image/star_half_empty_96px.png" alt="">
+                    </div>
+                    <span>Đã bán: 64</span>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        const loginForm = document.querySelector("form.login");
-        const loginBtn = document.querySelector("label.login");
-        const signupBtn = document.querySelector("label.signup");
-        const signupLink = document.querySelector(".signup-link a");
-        const Title = document.querySelector(".title-text .login");
-
-        signupBtn.onclick = (() => {
-            Title.style.marginLeft = "-50%";
-            loginForm.style.marginLeft = "-50%";
-        });
-        loginBtn.onclick = (() => {
-            Title.style.marginLeft = "0%";
-            loginForm.style.marginLeft = "0%";
-        });
-
-        signupLink.onclick = (() => {
-            signupBtn.click();
-        });
+    </section>
+    <!-- /* products section end */ -->
 
 
+    <!-- /* reviews section start */ -->
+    <section id="reviews">
+        <h2>Tin Tức | Reviews</h2>
+        <hr>
+        <div class="review">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/JHvzdLt9kv0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/tQgRtqL-fug"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/xSTCPHmJyQg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+    <!-- /* reviews section end */ -->
+
+
+    <!-- /* Contact section start */ -->
+    <section id="contact">
+        <h2>Liên hệ với chúng tôi</h2>
+        <div class="container">
+            <div class="contact">
+                <div class="name-box">
+                    <label for="name">Tên của bạn :</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="email-box">
+                    <label for="email">Email :</label>
+                    <input type="text" id="email">
+                </div>
+                <div class="massage-box">
+                    <label for="massage">Massage :</label><br>
+                    <textarea type="text" id="massage"></textarea>
+                </div>
+                <div>
+                    <button>Send<img src="./image/paper_plane_60px.png"> </button>
+                </div>
+            </div>
+            <iframe
+                src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238439.88475268873!2d106.90278610502787!3d20.96764174270363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a583f825ff2c9%3A0xc5d143510be28d44!2zVHAuIEjhuqEgTG9uZywgUXXhuqNuZyBOaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1638363804350!5m2!1svi!2s"
+                height="350" style="border:0;max-width: 600px" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- /* contact section end */ -->
+    <!-- /* footer section start */ -->
+
+    <section id="footer">
+        <div class="container footer">
+            <div class="col">
+                <h2>LIÊN HỆ ZALO : 0967-xxx-xxx</h2>
+                <p>Địa chỉ: Tp. Hạ Long, Quảng Ninh, Việt Nam
+                </p>
+                <p>Điện thoại: 0967-xxx-xxx</p>
+            </div>
+            <div class="col">
+                <h2>THÔNG TIN
+                </h2>
+                <ul>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Trang chủ</a></li>
+                    <li><a href="#sample-products"><i class="fas fa-angle-right"></i>Giới thiệu</a></li>
+                    <li><a href="#products"><i class="fas fa-angle-right"></i>Sản phẩm</a></li>
+                    <li><a href="#vouchers"><i class="fas fa-angle-right"></i>Khuyến mãi</a></li>
+                    <li><a href="#reviews"><i class="fas fa-angle-right"></i>Tin tức</a></li>
+                    <li><a href="#contact"><i class="fas fa-angle-right"></i>Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>HƯỚNG DẪN & CHÍNH SÁCH</h2>
+                <ul>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Hướng dẫn mua hàng</a></li>
+                    <li><a href="#sample-products"><i class="fas fa-angle-right"></i>Thẻ Thành Viên</a></li>
+                    <li><a href="#products"><i class="fas fa-angle-right"></i>Chính sách đổi trả & hoàn tiền</a>
+                    </li>
+                    <li><a href="#vouchers"><i class="fas fa-angle-right"></i>Chính sách thanh toán</a></li>
+                    <li><a href="#reviews"><i class="fas fa-angle-right"></i>Chính sách vận chuyển</a></li>
+                    <li><a href="#contact"><i class="fas fa-angle-right"></i>Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+        <div class="social">
+            <a href="http://">@NguyenLoc2002</a>
+            <div class="links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"> <i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- /* footer section end */ -->
+
+
+
+
+    <script type="text/javascript">
+        function showMenu() {
+            var menuBtn = document.querySelector('.menu-btn');
+            menuBtn.classList.toggle("active");
+        }
     </script>
 </body>
 
