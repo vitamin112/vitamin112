@@ -112,10 +112,11 @@ header {
   cursor: pointer;
   padding: 10px;
 }
+#header .product-tags:hover ul a,
 #header .product-tags:hover ul {
-  display: block;
-  color: #fa9122;
   height: auto;
+  opacity: 1;
+  visibility: visible;
 }
 @keyframes show-in {
   from {
@@ -133,19 +134,19 @@ header {
   top: 108%;
   left: 0;
   width: 100%;
+  height: 0;
+  border-radius: 5px;
   background-color: #666666;
   text-align: center;
-  display: none;
   box-shadow: 0 0 4px #000000;
   transition: all 0.4s ease-in-out;
+  animation: show-in 0.4s ease-in-out;
 }
 #header .product-tags:hover > a {
   color: #fa9122;
-  animation: all 2s ease-in-out;
 }
 #header .product-tags ul li:hover a {
   color: #fa9122;
-  animation: all 2s ease-in-out;
 }
 #header .cart-box .cart::after,
 #header .product-tags ul::after {
@@ -163,6 +164,9 @@ header {
   display: block;
   text-decoration: none;
   padding: 4px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 .product-tags ul li:not(:last-child) a {
   border-bottom: 1px solid #fff;
@@ -191,19 +195,19 @@ header {
   top: 100%;
   left: -25%;
   width: 150%;
-  height: 200%;
+  height: 00%;
   background: url(./image/shopping_cart_promotion_48px.png),
     linear-gradient(to left, #524848ab, #6155558f);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  border-radius: 5px;
   transition: all 0.4s ease-in-out;
-  display: none;
   box-shadow: 0 0 4px #000000;
   animation: show-in 0.4s ease-in-out;
 }
 #header .cart-box:hover .cart {
-  display: block;
+  height: 200%;
 }
 #header .menu-btn {
   width: 40px;
@@ -580,6 +584,10 @@ header {
 }
 #products form .find-products {
   width: 70%;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 #products .products h2 {
   color: #fa9122;
@@ -662,22 +670,27 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0%;
+  width: 100%;
   height: 20%;
   z-index: 10;
   background-color: #fa9222;
   border-radius: 8px;
   border: 1px solid #fff;
-  display: none;
   align-items: center;
   cursor: pointer;
+  display: flex;
+  margin-top: 100px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 #products .product:hover {
   transform: translateY(-4px);
 }
 #products .product:hover .add_cart {
-  display: flex;
-  width: 100%;
+  margin-top: 0px;
+  opacity: 1;
+  visibility: initial;
 }
 #products .product p span {
   color: red;
@@ -904,10 +917,8 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    height: 300px;
-    width: 50%;
+    width: 100%;
     padding: 20px;
-    flex-direction: column;
     align-items: flex-start;
     background-color: #fa9122;
     border-radius: 8px;
