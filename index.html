@@ -37,18 +37,18 @@
                         <a href="#products">Sản phẩm <i class="fas fa-angle-down"></i></a>
                         <ul>
                             <li>
-                                <a href="#vouchers">Giày</a>
+                                <a onclick="showMenu()" href="#vouchers">Giày</a>
                             </li>
                             <li>
-                                <a href="#">Quần</a>
+                                <a onclick="showMenu()" href="#">Quần</a>
                             </li>
                             <li>
-                                <a href="#">Áo</a>
+                                <a onclick="showMenu()" href="#">Áo</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="cart-box">
-                        <a href="#"> <img src="./image/add_shopping_cart_60px.png" alt=""> Giỏ hàng</a>
+                    <div class="cart-box" onclick="showMenu()">
+                        <a href=" #"> <img src="./image/add_shopping_cart_60px.png" alt=""> Giỏ hàng</a>
                         <div class="cart"></div>
                     </div>
 
@@ -500,10 +500,13 @@
 
 
     <script type="text/javascript">
+
         function showMenu() {
+
             var menuBtn = document.querySelector('.menu-btn');
             menuBtn.classList.toggle("active");
         }
+
     </script>
 </body>
 
